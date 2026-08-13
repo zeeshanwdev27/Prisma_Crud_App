@@ -34,7 +34,8 @@ model Product {
   id          Int      @id @default(autoincrement())
   productName String
   description String?
-  price       Decimal
+
+  price       Decimal  @db.Decimal(10, 2)
   stock       Int      @default(0)
 
   categoryId  Int
